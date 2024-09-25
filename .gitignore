@@ -1,0 +1,4 @@
+/postgres-data
+__pycache__
+app-volume
+.venv

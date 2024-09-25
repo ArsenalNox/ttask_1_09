@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+COPY req.txt .
+
+RUN pip install -r req.txt
+
+COPY . /cel/
+
+CMD ["celery", "-A", "cel.celery", "worker", "--loglevel", "INFO"]
